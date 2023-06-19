@@ -1,0 +1,29 @@
+.movie__mainDescriptionWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.movie_img {
+  display: block;
+  width: 250px;
+}
+
+.movie_linkList {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.movie_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  color: aliceblue;
+  background-color: #3d5a80;
+  border-radius: 15px;
+  text-decoration: none;
+}

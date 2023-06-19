@@ -1,0 +1,30 @@
+.description__title {
+  font-size: 25px;
+  color: #ee6c4d;
+  display: block;
+}
+.description__title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.description__block {
+  font-weight: 500;
+}
+
+.description__block:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.description__genresList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.description__genresItem {
+  padding: 10px 20px;
+  display: block;
+  background-color: #ee6c4d;
+  border-radius: 15px;
+  color: #fff;
+}

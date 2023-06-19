@@ -1,0 +1,14 @@
+.comments_list {
+  margin-top: 40px;
+  list-style: none;
+}
+
+.comments_item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.comments_commentAuthor {
+  color: #ee6c4d;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
