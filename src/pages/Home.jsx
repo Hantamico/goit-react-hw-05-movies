@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import TrendingList from "components/TrendingList/TrendingList";
 import Title from "components/Title/Title";
 import FilmAPI from "../services/film-api";
+import { useLocation } from "react-router-dom";
 
 
 
 const Home = () => {
+    const location = useLocation();
     const [trending, setTrending] = useState([]);
 
     useEffect(() => {
@@ -18,7 +20,7 @@ const Home = () => {
     return (
         <>
             <Title titleMessage="Popular Films"/>
-            <TrendingList filmList={trending}/>
+            <TrendingList location={location} filmList={trending}/>
         </>
     )
 }

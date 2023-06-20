@@ -1,11 +1,13 @@
 import FilmDescription from "components/FilmDescription/FilmDescription";
 import Title from "components/Title/Title";
-import { useEffect, useState } from "react";
-import { Link, Outlet, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import filmAPI from "services/film-api";
 import css from './FilmInfo.module.css'
 
 const FilmInfo = () => {
+    const location = useLocation();
+    const backLinkRef = useRef(location.state?.from ?? "/")
     const params = useParams();
     const [movieInfo, setMovieInfo] = useState(null);
     
@@ -18,11 +20,11 @@ const FilmInfo = () => {
     },[params.movieId])
     
     
-    
     return (
     <>
             {movieInfo &&
                 <div className="movie__mainDescription">
+                    <Link className={css.movie_link} to={backLinkRef.current}>Back</Link>
                     <div className={css.movie__mainDescriptionWrapper}>
                         <img className={css.movie_img} src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`} alt={movieInfo.title}  />
                         <div>
